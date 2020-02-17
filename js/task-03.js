@@ -7,6 +7,7 @@ class Storage {
 
     getItems() {
         console.table(this.items);
+        return this.items;
     }
 
     addItem(item) {
