@@ -1,37 +1,34 @@
 console.log('Задание 3');
 
 class Storage {
-    constructor(items) {
-        this.items = items;
-    }
+  constructor(items) {
+    this.items = items;
+  }
 
-    getItems() {
+  getItems() {
+    return console.table(this.items);
+  }
+
+  addItem(item) {
+    this.items.push(item);
+    console.table(this.items);
+  }
+
+  removeItem(item) {
+    for (let i = 0; i < this.items.length; i += 1) {
+      if (this.items[i] === item) {
+        this.items.splice(i, 1);
         console.table(this.items);
-        return this.items;
+      }
     }
-
-    addItem(item) {
-        this.items.push(item);
-        console.table(this.items);
-    }
-
-    removeItem(item) {
-        for (let i = 0; i < this.items.length; i += 1) {
-            if (this.items[i] === item) {
-                this.items.splice(i, 1);
-                console.table(this.items);
-            }
-        }
-    }
-
+  }
 }
 
-
 const storage = new Storage([
-    'Нанитоиды',
-    'Пролонгер',
-    'Железные жупи',
-    'Антигравитатор',
+  'Нанитоиды',
+  'Пролонгер',
+  'Железные жупи',
+  'Антигравитатор',
 ]);
 
 const items = storage.getItems();

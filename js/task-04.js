@@ -1,29 +1,29 @@
 console.log('Задание 4');
 
 class StringBuilder {
-    constructor(value) {
-        this._value = value;
-    }
+  constructor(value) {
+    this._value = value;
+  }
 
-    get value() {
-        return this._value;
-    }
+  get value() {
+    return this._value;
+  }
 
-    set value(newValue) {
-        this._value = newValue;
-    }
+  set value(newValue) {
+    this._value = newValue;
+  }
 
-    append(str) {
-        this.value += str;
-    }
+  append(str) {
+    this.value = this.value + str;
+  }
 
-    prepend(str) {
-        this.value = str + this.value;
-    }
+  prepend(str) {
+    this.value = str + this.value;
+  }
 
-    pad(str) {
-        this.value = str + this.value + str;
-    }
+  pad(str) {
+    this.value = str + this.value + str;
+  }
 }
 
 const builder = new StringBuilder('.');
